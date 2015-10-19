@@ -43,9 +43,54 @@ def parse_command_line_options(argv):
     return parser.parse_args(argv)
 
 
-def create_class(path):
+def to_camel_case(string):
+    def to_upper(patern):
+        s = patern.group(1)
+        if s.startswith('_'):
+            return s[1:].upper()
+        return s.upper()
+    return re.sub(r'(^.|_.)', to_upper, string)
 
-    print "create class here", path
+
+def create_cc_file_content(path, file):
+    lines = create_headers()
+    lines.append('')
+    dir_name = os.path.dirname(path)
+    lines.append('#include "' + dir_name + '/' + file + '.h"')
+    lines.append('')
+    return lines
+
+
+def create_h_file_content(path, file):
+    lines = create_headers()
+    lines.append('')
+    dir_name = os.path.dirname(path)
+    guard = dir_name.replace('/', '_').upper() + '_' + file.upper() + '_H_'
+    lines.append('#ifndef ' + guard)
+    lines.append('#define ' + guard)
+    lines.append('')
+    class_name = to_camel_case(file)
+    lines.append('class ' + class_name + '{')
+    lines.append('')
+    lines.append('};')
+    lines.append('')
+    lines.append('#endif  // ' + guard)
+    lines.append('')
+    return lines
+
+
+def create_class(path):
+    file = os.path.basename(path)
+    if file.endswith('.h'):
+        file.replace('.h', '')
+    if file.endswith('.cc'):
+        file.replace('.h', '')
+    cc_file = os.path.join(os.getcwd(), os.path.dirname(path), file + '.cc')
+    with open(cc_file, 'wb') as f:
+        f.write('\n'.join(create_cc_file_content(path, file)))
+    h_file = os.path.join(os.getcwd(), os.path.dirname(path), file + '.h')
+    with open(h_file, 'wb') as f:
+        f.write('\n'.join(create_h_file_content(path, file)))
 
 
 def create_browser_test(path):
@@ -58,13 +103,7 @@ def create_browser_test(path):
     lines.append('')
 
     class_name = os.path.basename(included_file).replace('.h', '')
-
-    def to_upper(patern):
-        s = patern.group(1)
-        if s.startswith('_'):
-            return s[1:].upper()
-        return s.upper()
-    class_name = re.sub(r'(^.|_.)', to_upper, class_name) + 'Test'
+    class_name = to_camel_case(class_name) + 'Test'
 
     lines.append('class ' + class_name + ' : public InProcessBrowserTest {')
     lines.append('};')
