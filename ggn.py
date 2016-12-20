@@ -9,7 +9,7 @@ gn_paths = [os.path.join(os.getcwd(), 'out', 'debug_gn'), os.path.join(os.getcwd
 
 for p in gn_paths:
     if not os.path.exists(p):
-        os.makedirs(p, 755)
+        os.makedirs(p, 0755)
     with open(os.path.join(p, 'args.gn'), 'w') as f:
         f.write('dcheck_always_on = true\n')
         f.write('is_component_build = true\n')
