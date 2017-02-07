@@ -17,10 +17,7 @@ project_file_content = """
     ],
     "folder_exclude_patterns": [
       "out",
-      "third_party",
       ".git",
-      "Debug",
-      "Release"
     ]
   }]
 }
