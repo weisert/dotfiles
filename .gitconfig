@@ -1,6 +1,5 @@
 [user]
 	name = Igor Vayzert
-#	email = igor.weisert@gmail.com
 	email = weisert@yandex-team.ru
 [branch "master"]
 	rebase = true
@@ -16,3 +15,4 @@
 	fscache = true
 	preloadindex = true
 	autocrlf = false
+	longpaths = true
