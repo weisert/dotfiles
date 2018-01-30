@@ -1,11 +1,17 @@
 
-alias CDT='export PATH=$PATH:/home/weisert/projects/chromium/depot_tools'
-alias YDT='export PATH=$PATH:/home/weisert/projects/y_depot_tools'
+alias CDT='export PATH=$PATH:$HOME/projects/chromium/depot_tools'
+alias YDT='export PATH=$PATH:$HOME/projects/y_depot_tools'
 
 alias ggrep='git grep -n'
 
-alias bc='ninja -C out/debug_gn chrome'
-alias bu='ninja -C out/debug_gn unit_tests'
-alias bb='ninja -C out/debug_gn browser_tests'
-alias ba='ninja -C out/debug_gn chrome browser_tests unit_tests components_unittests components_browsertests'
+case "$(uname)" in
+   Darwin*) PREFIX="" ;;
+   Linux*)  PREFIX="" ;;
+   *)       PREFIX="winpty" ;;
+esac
+
+alias bc='$PREFIX ninja -C out/debug chrome'
+alias bu='$PREFIX ninja -C out/debug unit_tests'
+alias bb='$PREFIX ninja -C out/debug browser_tests'
+alias ba='$PREFIX ninja -C out/debug chrome browser_tests unit_tests components_unittests components_browsertests'
 
