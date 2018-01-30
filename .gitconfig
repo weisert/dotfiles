@@ -1,0 +1,18 @@
+[user]
+	name = Igor Vayzert
+#	email = igor.weisert@gmail.com
+	email = weisert@yandex-team.ru
+[branch "master"]
+	rebase = true
+	remote = origin
+	merge = master
+[branch]
+	autosetuprebase = always
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	fscache = true
+	preloadindex = true
+	autocrlf = false
