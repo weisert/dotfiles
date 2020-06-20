@@ -17,12 +17,21 @@ set tabstop=2
 " Shift width
 set shiftwidth=2
 
-" Hightlisght search result
+" Highlight search result
 set hlsearch
 
 " Incremental search
 set incsearch
 
 " --------------------------------- MAPPINGS ---------------------------------
+" Hide search highlight
 map <F2> :noh<CR>
+
+" PRIMARY (copy-on-select) register mappings
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+
+" CLIPBOARD (CTRL-C) register mappings
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
