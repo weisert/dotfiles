@@ -35,3 +35,6 @@ noremap <Leader>P "*p
 noremap <Leader>y "+y
 noremap <Leader>p "+p
 
+" Replace word under cursor
+noremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
