@@ -23,6 +23,9 @@ set hlsearch
 " Incremental search
 set incsearch
 
+" Match all types of brackets by % command
+set matchpairs=(:),{:},[:],<:>
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
