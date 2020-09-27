@@ -41,6 +41,12 @@ noremap <Leader>p "+p
 " Replace word under cursor
 noremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+" One key use of a and b registers
+map <F3> "ay
+map <F4> "ap
+map <F5> "by
+map <F6> "bp
+
 " --------------------------------- AUTO COMMANDS ----------------------------
 
 let g:help_in_tabs = 1
