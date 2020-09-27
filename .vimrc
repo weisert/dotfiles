@@ -29,6 +29,9 @@ set matchpairs=(:),{:},[:],<:>
 " Show position of the file
 set ruler
 
+" Set backspace behavior
+backspace=indent,eol,start
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
