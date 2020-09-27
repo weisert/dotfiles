@@ -26,6 +26,9 @@ set incsearch
 " Match all types of brackets by % command
 set matchpairs=(:),{:},[:],<:>
 
+" Show position of the file
+set ruler
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
