@@ -23,6 +23,12 @@ set hlsearch
 " Incremental search
 set incsearch
 
+" Use case insensitive search
+set ignorecase
+
+" Use partial sensitivity
+set smartcase
+
 " Match all types of brackets by % command
 set matchpairs=(:),{:},[:],<:>
 
@@ -52,6 +58,9 @@ map <F3> "ay
 map <F4> "ap
 map <F5> "by
 map <F6> "bp
+
+" Use magic regex syntax by default
+nnoremap / /\v
 
 " --------------------------------- AUTO COMMANDS ----------------------------
 
