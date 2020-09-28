@@ -30,7 +30,7 @@ set matchpairs=(:),{:},[:],<:>
 set ruler
 
 " Set backspace behavior
-backspace=indent,eol,start
+set backspace=indent,eol,start
 
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
