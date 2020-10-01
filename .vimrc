@@ -51,6 +51,9 @@ if has('persistent_undo')
 
 endif
 
+" Filename autocompletion
+set wildmode=list:longest,full
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
