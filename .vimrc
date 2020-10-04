@@ -3,7 +3,7 @@
 set number
 
 " Show syntax highlighting
-syntax on
+syntax enable
 
 " Show ruler at column 80
 set colorcolumn=80
