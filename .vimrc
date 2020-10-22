@@ -78,6 +78,12 @@ map <F6> "bp
 " Use magic regex syntax by default
 nnoremap / /\v
 
+" Tab related keys
+noremap <M-Up> :tabr<CR>
+noremap <M-Down> :tabl<CR>
+noremap <M-Left> :tabp<CR>
+noremap <M-Right> :tabn<CR>
+
 " --------------------------------- AUTO COMMANDS ----------------------------
 
 let g:help_in_tabs = 1
