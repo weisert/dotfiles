@@ -54,6 +54,9 @@ endif
 " Filename autocompletion
 set wildmode=list:longest,full
 
+" History length
+set history=10000
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
