@@ -73,13 +73,22 @@ noremap <Leader>p "+p
 noremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " One key use of a and b registers
-map <F3> "ay
-map <F4> "ap
-map <F5> "by
-map <F6> "bp
+map <Leader><F3> "wy
+map <F3> "wp
+map <Leader><F4> "xy
+map <F4> "xp
+map <Leader><F5> "yy
+map <F5> "yp
+map <Leader><F6> "zy
+map <F6> "zp
+
+" One key replay macros
+map <F7> @a
+map <F8> @b
 
 " Use magic regex syntax by default
 nnoremap / /\v
+nnoremap ? ?\v
 
 " Tab related keys
 noremap <M-Up> :tabr<CR>
