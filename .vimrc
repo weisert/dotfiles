@@ -57,6 +57,9 @@ set wildmode=list:longest,full
 " History length
 set history=10000
 
+" Allow hidden buffers
+set hidden
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
