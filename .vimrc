@@ -60,6 +60,12 @@ set history=10000
 " Allow hidden buffers
 set hidden
 
+" Set invisible characters behavior
+" Toggle `set list`
+nmap <leader>l :set list!<CR>
+" Symbols for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
