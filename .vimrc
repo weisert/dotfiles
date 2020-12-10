@@ -105,6 +105,9 @@ noremap <M-Down> :tabl<CR>
 noremap <M-Left> :tabp<CR>
 noremap <M-Right> :tabn<CR>
 
+" Expand path relatively the file opened in the current buffer
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " --------------------------------- AUTO COMMANDS ----------------------------
 
 let g:help_in_tabs = 1
@@ -115,7 +118,7 @@ augroup HelpInTabs
     autocmd BufEnter *.txt call HelpInNewTab()
 augroup END
 
-"Only apply to help files...
+" Only apply to help files...
 function! HelpInNewTab ()
     if &buftype == 'help' && g:help_in_tabs
         "Convert the help window to a tab...
