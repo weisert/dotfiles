@@ -126,3 +126,9 @@ function! HelpInNewTab ()
     endif
 endfunction
 
+" --------------------------------- PLUGINS ----------------------------------
+
+set nocompatible
+filetype plugin on
+runtime macros/matchit.vim
+
