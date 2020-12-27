@@ -108,6 +108,10 @@ noremap <M-Right> :tabn<CR>
 " Expand path relatively the file opened in the current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" Fix & commad behavior
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
 " --------------------------------- AUTO COMMANDS ----------------------------
 
 let g:help_in_tabs = 1
