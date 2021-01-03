@@ -140,5 +140,7 @@ filetype plugin on
 
 call plug#begin()
   Plug 'adelarsq/vim-matchit'
+  Plug 'preservim/nerdtree'
+  Plug 'tpope/vim-surround'
 call plug#end()
 
