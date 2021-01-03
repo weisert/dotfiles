@@ -108,7 +108,7 @@ noremap <M-Right> :tabn<CR>
 " Expand path relatively the file opened in the current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" Fix & commad behavior
+" Fix & command behavior
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
 
@@ -131,8 +131,14 @@ function! HelpInNewTab ()
 endfunction
 
 " --------------------------------- PLUGINS ----------------------------------
-
 set nocompatible
 filetype plugin on
-runtime macros/matchit.vim
+
+" Install vim-plug using the following shell command:
+" $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+" >   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+call plug#begin()
+  Plug 'adelarsq/vim-matchit'
+call plug#end()
 
