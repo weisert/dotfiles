@@ -112,6 +112,12 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
 
+" Toggle nerdtree window
+map <Leader>t :NERDTreeToggle<CR>
+
+" Find current file in the filesystem
+map <Leader>r :NERDTreeFind<CR>
+
 " --------------------------------- AUTO COMMANDS ----------------------------
 
 let g:help_in_tabs = 1
