@@ -2,6 +2,9 @@
 " Show line numbers
 set number
 
+" Set relative line number
+set relativenumber
+
 " Show syntax highlighting
 syntax enable
 
