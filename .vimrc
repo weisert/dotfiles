@@ -153,6 +153,7 @@ filetype plugin on
 call plug#begin()
   Plug 'adelarsq/vim-matchit'
   Plug 'avakarev/vim-watchdog'
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-repeat'
