@@ -69,6 +69,9 @@ nmap <leader>l :set list!<CR>
 " Symbols for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" Always show status line
+set laststatus=2
+
 " --------------------------------- MAPPINGS ---------------------------------
 " Hide search highlight
 map <F2> :noh<CR>
@@ -149,6 +152,7 @@ filetype plugin on
 
 call plug#begin()
   Plug 'adelarsq/vim-matchit'
+  Plug 'avakarev/vim-watchdog'
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-repeat'
