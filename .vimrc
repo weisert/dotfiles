@@ -153,12 +153,13 @@ filetype plugin on
 call plug#begin()
   Plug 'adelarsq/vim-matchit'
   Plug 'avakarev/vim-watchdog'
+  Plug 'easymotion/vim-easymotion'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
-  Plug 'easymotion/vim-easymotion'
+  Plug 'vim-scripts/ReplaceWithRegister'
 call plug#end()
 
