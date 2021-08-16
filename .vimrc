@@ -161,5 +161,6 @@ call plug#begin()
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-scripts/ReplaceWithRegister'
+  Plug 'wincent/terminus'
 call plug#end()
 
