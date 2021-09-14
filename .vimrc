@@ -148,6 +148,9 @@ function! HelpInNewTab ()
     endif
 endfunction
 
+" Use F12 to run flake8
+autocmd FileType python map <buffer> <F12> :call flake8#Flake8()<CR>
+
 " --------------------------------- PLUGINS ----------------------------------
 set nocompatible
 filetype plugin on
@@ -161,6 +164,7 @@ call plug#begin()
   Plug 'avakarev/vim-watchdog'
   Plug 'easymotion/vim-easymotion'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'nvie/vim-flake8'
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-commentary'
