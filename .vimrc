@@ -111,6 +111,12 @@ noremap <M-Down> :tabl<CR>
 noremap <M-Left> :tabp<CR>
 noremap <M-Right> :tabn<CR>
 
+" Buffer related commmands
+noremap <C-Up> :bfirst<CR>
+noremap <C-Down> :blast<CR>
+noremap <C-Left> :bprevious<CR>
+noremap <C-Right> :bnext<CR>
+
 " Expand path relatively the file opened in the current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
