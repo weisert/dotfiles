@@ -164,6 +164,8 @@ call plug#begin()
   Plug 'avakarev/vim-watchdog'
   Plug 'easymotion/vim-easymotion'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'kana/vim-textobj-entire'
+  Plug 'kana/vim-textobj-user'
   Plug 'mg979/vim-visual-multi'
   Plug 'nvie/vim-flake8'
   Plug 'preservim/nerdtree'
