@@ -116,6 +116,23 @@ noremap <C-Up> :bfirst<CR>
 noremap <C-Down> :blast<CR>
 noremap <C-Left> :bprevious<CR>
 noremap <C-Right> :bnext<CR>
+nmap <leader>Q :bufdo bdelete<CR>
+
+" Faster windows switching
+nmap <silent> <C-h> <C-w>h
+nmap <silent> <C-j> <C-w>j
+nmap <silent> <C-k> <C-w>k
+nmap <silent> <C-l> <C-w>l
+
+" Reflect visual selection after indenting
+vnoremap < <gv
+vnoremap > >gv
+
+" Allow gf to open non-existent files
+map gf :edit <cfile><CR>
+
+" Open current file in the default program
+nmap <leader>x :!xdg-open %<CR><CR>
 
 " Expand path relatively the file opened in the current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
