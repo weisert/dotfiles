@@ -184,6 +184,7 @@ call plug#begin()
   Plug 'kana/vim-textobj-entire'
   Plug 'kana/vim-textobj-user'
   Plug 'mg979/vim-visual-multi'
+  Plug 'michaeljsmith/vim-indent-object'
   Plug 'nvie/vim-flake8'
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-abolish'
