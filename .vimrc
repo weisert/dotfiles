@@ -147,6 +147,9 @@ map <Leader>t :NERDTreeToggle<CR>
 " Find current file in the filesystem
 map <Leader>r :NERDTreeFind<CR>
 
+" Call fzf
+nnoremap <C-p> :FZF<CR>
+
 " --------------------------------- AUTO COMMANDS ----------------------------
 
 let g:help_in_tabs = 1
@@ -181,6 +184,7 @@ call plug#begin()
   Plug 'avakarev/vim-watchdog'
   Plug 'easymotion/vim-easymotion'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'kana/vim-textobj-entire'
   Plug 'kana/vim-textobj-user'
   Plug 'mg979/vim-visual-multi'
