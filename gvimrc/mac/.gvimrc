@@ -18,3 +18,9 @@ highlight PmenuThumb ctermbg=gray guibg=#808080
 " Font type and size
 set guifont=Courier\ New:h18
 
+" Fix shell color issue in MacVim
+set guioptions+=!
+
+" Use bash by default in MacVim
+set shell=/bin/bash
+
