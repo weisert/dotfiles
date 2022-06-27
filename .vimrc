@@ -112,10 +112,10 @@ noremap <M-Left> :tabp<CR>
 noremap <M-Right> :tabn<CR>
 
 " Buffer related commmands
-noremap <C-Up> :bfirst<CR>
-noremap <C-Down> :blast<CR>
-noremap <C-Left> :bprevious<CR>
-noremap <C-Right> :bnext<CR>
+noremap <Leader>k :bfirst<CR>
+noremap <Leader>j :blast<CR>
+noremap <Leader>h :bprevious<CR>
+noremap <Leader>l :bnext<CR>
 nmap <leader>Q :bufdo bdelete<CR>
 
 " Faster windows switching
