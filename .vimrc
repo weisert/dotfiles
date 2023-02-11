@@ -150,6 +150,12 @@ map <Leader>r :NERDTreeFind<CR>
 " Call fzf
 nnoremap <C-p> :FZF<CR>
 
+" Run terminal at the bottom of the screen
+nnoremap <F9> :below terminal ++rows=15 ++close<CR>
+
+" Run python terminal
+nnoremap <Leader><F9> :below terminal ++rows=15 ++close python3<CR>
+
 " --------------------------------- AUTO COMMANDS ----------------------------
 
 let g:help_in_tabs = 1
